@@ -1,0 +1,13 @@
+<aside class="bg-gradient-to-br from-blue-50 to-white border border-blue-200 rounded-2xl shadow-lg p-6 max-w-md mx-auto my-8">
+   <h2 class="text-2xl font-bold text-blue-700 mb-4 border-b border-blue-200 pb-2">Pipes Blog Menu</h2>
+   <ul class="space-y-3">
+      @for (item of rutasPipes; track $index) {
+         <li>
+            <a [routerLink]="item.url"
+                class="block px-4 py-3 rounded-xl bg-white hover:bg-blue-100 border border-blue-100 shadow transition-all duration-200 text-blue-800 font-medium text-lg tracking-wide hover:pl-6 hover:text-blue-600">
+               <span class="inline-block align-middle mr-2">📝</span>{{item.title}}
+            </a>
+         </li>
+      }
+   </ul>
+</aside>
