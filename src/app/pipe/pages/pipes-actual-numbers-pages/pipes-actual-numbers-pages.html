@@ -1,1 +1,33 @@
-<p>pipes-actual-numbers-pages works!</p>
+<main class="pipe-text flex flex-col items-center">
+    <h2 class="mb-8 text-2xl font-bold text-blue-700">Ofertas Especiales</h2>
+    <section class="flex flex-col gap-6 w-full max-w-xl mb-8">
+        <div class="relative bg-gradient-to-r from-yellow-50 to-yellow-100 border border-yellow-300 rounded-2xl shadow-lg px-8 py-6 flex flex-col items-center ticket-airline overflow-hidden">
+            <div class="absolute left-0 top-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full border-2 border-yellow-200 -ml-4"></div>
+            <div class="absolute right-0 top-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full border-2 border-yellow-200 -mr-4"></div>
+            <span class="text-3xl mb-2">🛒</span>
+            <h3 class="text-lg font-bold text-yellow-700 mb-1 tracking-widest">Producto A</h3>
+            <p class="text-slate-500 text-center mb-2">¡Descuento del 20%!</p>
+            <p class="text-green-600 font-bold">{{descuento() | percent:'1.2-2'}}</p>
+        </div>
+        <div class="relative bg-gradient-to-r from-green-50 to-green-100 border border-green-300 rounded-2xl shadow-lg px-8 py-6 flex flex-col items-center ticket-airline overflow-hidden">
+            <div class="absolute left-0 top-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full border-2 border-green-200 -ml-4"></div>
+            <div class="absolute right-0 top-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full border-2 border-green-200 -mr-4"></div>
+            <span class="text-3xl mb-2">📦</span>
+            <h3 class="text-lg font-bold text-green-700 mb-1 tracking-widest">Producto B</h3>
+            <p class="text-slate-500 text-center mb-2">Envío gratis</p>
+            <p class="text-green-600 font-bold">
+                {{precio() | currency:'USD':'symbol':'1.2-2'}}
+            </p>
+        </div>
+        <div class="relative bg-gradient-to-r from-red-50 to-red-100 border border-red-300 rounded-2xl shadow-lg px-8 py-6 flex flex-col items-center ticket-airline overflow-hidden">
+            <div class="absolute left-0 top-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full border-2 border-red-200 -ml-4"></div>
+            <div class="absolute right-0 top-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full border-2 border-red-200 -mr-4"></div>
+            <span class="text-3xl mb-2">🔥</span>
+            <h3 class="text-lg font-bold text-red-700 mb-1 tracking-widest">Producto C</h3>
+            <p class="text-slate-500 text-center mb-2">Oferta limitada</p>
+            <p class="text-green-600 font-bold">
+                {{precio() | currency:'EUR':'symbol':'1.2-2'}}
+            </p>
+        </div>
+    </section>
+</main>

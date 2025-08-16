@@ -1,24 +1,29 @@
-<main class="pipe-text">
-  <p class="mb-8 text-lg text-slate-700">Estos son los mejores pipes para los textos y transformaciones</p>
-
-  <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-    <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center border-t-4 border-blue-400">
-      <span class="text-4xl mb-2">🔤</span>
-      <h3 class="text-xl font-bold text-blue-700 mb-1">Pipes de Texto</h3>
-      <p class="text-slate-500 text-center mb-2">Transforma y formatea cadenas fácilmente.</p>
-      <span class="text-2xl font-semibold text-blue-600">+10</span>
-    </div>
-    <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center border-t-4 border-green-400">
-      <span class="text-4xl mb-2">📅</span>
-      <h3 class="text-xl font-bold text-green-700 mb-1">Pipes de Fecha</h3>
-      <p class="text-slate-500 text-center mb-2">Manejo avanzado de fechas y formatos.</p>
-      <span class="text-2xl font-semibold text-green-600">+7</span>
-    </div>
-    <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center border-t-4 border-yellow-400">
-      <span class="text-4xl mb-2">💱</span>
-      <h3 class="text-xl font-bold text-yellow-700 mb-1">Pipes de Moneda</h3>
-      <p class="text-slate-500 text-center mb-2">Formatea valores monetarios y porcentajes.</p>
-      <span class="text-2xl font-semibold text-yellow-600">+5</span>
-    </div>
+<main class="pipe-text flex flex-col items-center">
+  <h2 class="mb-8 text-2xl font-bold text-blue-700">Ofertas Especiales</h2>
+  <section class="flex flex-col gap-6 w-full max-w-xl mb-8">
+      <div class="relative bg-gradient-to-r from-yellow-50 to-yellow-100 border border-yellow-300 rounded-2xl shadow-lg px-8 py-6 flex flex-col items-center ticket-airline overflow-hidden">
+          <div class="absolute left-0 top-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full border-2 border-yellow-200 -ml-4"></div>
+          <div class="absolute right-0 top-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full border-2 border-yellow-200 -mr-4"></div>
+          <span class="text-3xl mb-2">🛒</span>
+          <h3 class="text-lg font-bold text-yellow-700 mb-1 tracking-widest">Producto A</h3>
+          <p class="text-slate-500 text-center mb-2">{{constumDate()}}</p>
+          <p class="text-green-600 font-bold">{{ constumDate() | date}}</p>
+      </div>
+      <div class="relative bg-gradient-to-r from-green-50 to-green-100 border border-green-300 rounded-2xl shadow-lg px-8 py-6 flex flex-col items-center ticket-airline overflow-hidden">
+          <div class="absolute left-0 top-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full border-2 border-green-200 -ml-4"></div>
+          <div class="absolute right-0 top-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full border-2 border-green-200 -mr-4"></div>
+          <span class="text-3xl mb-2">📦</span>
+          <h3 class="text-lg font-bold text-green-700 mb-1 tracking-widest">Producto B</h3>
+          <p class="text-slate-500 text-center mb-2">Fecha de envio {{fechaEnvio()}}</p>
+            <p class="text-green-600 font-bold">{{ (fechaEnvio() | date: "yyyy-MM-dd'T'HH:mm:ss") | date: "EEEE, d 'de' MMMM 'de' yyyy, HH:mm" }}</p>
+      </div>
+      <div class="relative bg-gradient-to-r from-red-50 to-red-100 border border-red-300 rounded-2xl shadow-lg px-8 py-6 flex flex-col items-center ticket-airline overflow-hidden">
+          <div class="absolute left-0 top-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full border-2 border-red-200 -ml-4"></div>
+          <div class="absolute right-0 top-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full border-2 border-red-200 -mr-4"></div>
+          <span class="text-3xl mb-2">🔥</span>
+          <h3 class="text-lg font-bold text-red-700 mb-1 tracking-widest">Producto C</h3>
+          <p class="text-slate-500 text-center mb-2">Fecha de expiración:</p>
+          <p class="text-green-600 font-bold">{{ '2023-10-10T00:00:00'}}</p>
+      </div>
   </section>
 </main>

@@ -10,15 +10,15 @@ const routes: Routes = [
     component: LayoutPipes,
     children: [
       {
-        path: '',
+        path: 'text',
         component: PipesActualPages
       },
       {
-        path:'pipe/date',
+        path:'date',
         component: PipesActualDatePages
       },
       {
-        path:'pipe/currency',
+        path:'currency',
         component:PipesActualNumbersPages
       }
     ]

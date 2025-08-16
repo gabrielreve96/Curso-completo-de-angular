@@ -4,6 +4,7 @@
       @for (item of rutasPipes; track $index) {
          <li>
             <a [routerLink]="item.url"
+             [routerLinkActive]="['text-blue-600', 'font-semibold']"
                 class="block px-4 py-3 rounded-xl bg-white hover:bg-blue-100 border border-blue-100 shadow transition-all duration-200 text-blue-800 font-medium text-lg tracking-wide hover:pl-6 hover:text-blue-600">
                <span class="inline-block align-middle mr-2">📝</span>{{item.title}}
             </a>
